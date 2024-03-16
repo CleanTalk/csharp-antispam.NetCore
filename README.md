@@ -87,7 +87,7 @@ public async Task OnPostAsync()
     return;
 }
 ```
-Result on screen:
+The result you can see here:
 ![screen_example1](https://github.com/Barogg/csharp-antispam.NetCore/assets/38746827/1e77fd8f-de39-4d23-8ce6-39b8c67391be)
 API returns response object:
 * stop_queue — stop queue for comment approvement (comment is a 100% spam);
