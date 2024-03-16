@@ -1,0 +1,109 @@
+﻿@page
+@model APIMethods.Pages.ContactModel
+@{
+}
+
+<div class="row">
+	<div class="col-lg-9 mx-auto rounded border p-3">
+		<h2 class="text-center mb-5">Contact Form</h2>
+
+
+		@if (Model.errorMessage.Length > 0)
+		{
+		<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+			<strong>@Model.errorMessage</strong>
+			<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+		</div>
+		}
+		else if (Model.successMessage.Length > 0)
+		{
+		<div class='alert alert-success alert-dismissible fade show' role='alert'>
+			<strong>@Model.successMessage</strong>
+			<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+		</div>
+		}
+
+
+		<form method="post" asp-page-handler="OnPostAsync">
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">First Name</label> <div class="col-sm-8">
+					<input class="form-control" asp-for="FirstName">
+					<span asp-validation-for="FirstName" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Last Name</label> 
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="LastName">
+					<span asp-validation-for="LastName" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Email</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Email">
+					<span asp-validation-for="Email" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Phone</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Phone">
+					<span asp-validation-for="Phone" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Subject</label> 
+				<div class="col-sm-8">
+					<select class="form-select" asp-for="Subject">
+						<option value="Order Status">Order Status</option>
+						<option value="Refund Request">Refund Request</option>
+						<option value="Job Application">Job Application</option>
+						<option value="Other">Other</option>
+					</select>
+					<span asp-validation-for="Subject" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Message</label> 
+				<div class="col-sm-8">
+					<textarea class="form-control" asp-for="Message"></textarea>
+					<span asp-validation-for="Message" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="offset-sm-4">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+			<input type="hidden" id="jsOn" name="jsOn" value="0" />
+			<input type="hidden" id="pageLoadTime" name="pageLoadTime">
+			</form>
+</div>
+
+@section Scripts {
+		<script>
+			document.querySelector("form").addEventListener("submit", function () {
+				const pageLoadTime = document.getElementById("pageLoadTime").value;
+				const currentTime = new Date().getTime();
+				const submitTime = Math.round((currentTime - pageLoadTime) / 1000);
+				document.getElementById("pageLoadTime").value = submitTime;
+			});
+		</script>
+		<script src="https://moderate.cleantalk.org/ct-bot-detector-wrapper.js" id="ct_bot_detector-js"></script>
+		<script>
+			window.addEventListener("DOMContentLoaded", function () {
+				document.getElementById("jsOn").value = 1;
+				document.getElementById("pageLoadTime").value = new Date().getTime();
+			});
+		</script>
+
+}
