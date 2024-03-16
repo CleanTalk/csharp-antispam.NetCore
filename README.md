@@ -1,24 +1,24 @@
 # csharp-antispam
 CleanTalk service API for C# .Net Core. CleanTalk is a Cloud-Based spam filtering service that allows you to protect your website from spam. CleanTalk provides spam protection that invisible to visitors without using captcha or other methods when visitors have to prove that they are real peoples.
-# Actual API documentation
+## Actual API documentation
 * [check_message](https://cleantalk.org/help/api-check-message) - Check IPs, Emails and messages for spam activity
 * [check_newuser](https://cleantalk.org/help/api-check-newuser) - Check registrations of new users
 * [spam_check](https://cleantalk.org/help/api-spam-check) - This method should be used for bulk checks of IP, Email for spam activity
 * [ip_info](https://cleantalk.org/help/api-ip-info-country-code) - method returns a 2-letter country code (US, UK, CN, etc.) for an IP address
-# How does the API stop spam?
+## How does the API stop spam?
 * The API uses several simple tests to stop spammers.
 * Spambot signatures.
 * Blacklist checks by Email, IP, website domain names.
 * Javascript availability.
 * Comment submit time.
 * Relevance test for the comment.
-# How does the API work?
+## How does the API work?
 API sends the comment's text and several previous approved comments to the server. The server evaluates the relevance of the comment's text on the topic, tests for spam and finally provides a solution - to publish or to put in manual moderation queue of comments. If a comment is placed in manual moderation queue, the plugin adds a rejection explanation to the text of the comment.
-# Requirements
+## Requirements
 * [.Net Core v8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * [CleanTalk account](https://cleantalk.org/register?product=anti-spam)
-# SPAM test examples
-## Using the check_message method to check contact form
+## SPAM test examples
+### Using the check_message method to check contact form
 ```csharp
 public const string AuthKey = "your_auth_key";
 
