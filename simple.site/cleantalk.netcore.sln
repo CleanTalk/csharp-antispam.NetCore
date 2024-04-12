@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIMethods", "APIMethods.csproj", "{F5724775-D877-4FB4-B4D1-AABA88667590}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "simple.site", "simple.site.csproj", "{F5724775-D877-4FB4-B4D1-AABA88667590}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cleantalk.classes", "..\cleantalk.classes\cleantalk.classes.csproj", "{D677890E-492A-418F-B6AC-F00E58813528}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F5724775-D877-4FB4-B4D1-AABA88667590}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5724775-D877-4FB4-B4D1-AABA88667590}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5724775-D877-4FB4-B4D1-AABA88667590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D677890E-492A-418F-B6AC-F00E58813528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D677890E-492A-418F-B6AC-F00E58813528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D677890E-492A-418F-B6AC-F00E58813528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D677890E-492A-418F-B6AC-F00E58813528}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

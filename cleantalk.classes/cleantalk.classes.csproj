@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <Title>CleanTalk.Antispam</Title>
+    <Authors>CleanTalk team</Authors>
+    <Product>CleanTalk.Antispam</Product>
+    <Description>CleanTalk service API for C# .net core. It is invisible protection from spam, no captchas, no puzzles, no animals and no math.</Description>
+    <PackageProjectUrl>https://cleantalk.org/</PackageProjectUrl>
+    <PackageId>CleanTalk.Antispam.NetCore</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
