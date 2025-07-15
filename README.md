@@ -1,5 +1,16 @@
-# csharp-antispam
-CleanTalk service API for C# .Net Core. CleanTalk is a Cloud-Based spam filtering service that allows you to protect your website from spam. CleanTalk provides spam protection that invisible to visitors without using captcha or other methods when visitors have to prove that they are real peoples.
+# dotnet-core Anti-Spam Protection for Forms & APIs
+
+Spam protection for ASP.NET Core applications. Block bots and spam in contact forms, registration pages, and public API endpoints.
+
+CleanTalk is a cloud-based spam filter for .NET. It analyzes form submissions, IPs, emails, and client behavior in real time. No captchas, no extra steps for users — just silent, effective spam blocking.
+
+Features
+* Works with any ASP.NET Core form or API
+* Filters spam using check_message, check_newuser, and spam_check methods
+* Compatible with Razor Pages, Web API, Blazor, and MVC
+* Analyzes IP, email, user agent, submit time, and JS activity
+* Integrates easily via middleware or service injection
+
 ## Actual API documentation
 * [check_message](https://cleantalk.org/help/api-check-message) - Check IPs, Emails and messages for spam activity
 * [check_newuser](https://cleantalk.org/help/api-check-newuser) - Check registrations of new users
