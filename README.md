@@ -28,6 +28,11 @@ API sends the comment's text and several previous approved comments to the serve
 ## Requirements
 * [.Net Core v8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * [CleanTalk account](https://cleantalk.org/register?product=anti-spam)
+
+### Websites that trust CleanTalk!
+
+![CleanTalk Anti-Spam Rating](https://cleantalk.org/webpack/img/cleantalk_rating.png)
+
 ## SPAM test examples
 ### Using the check_message method to check contact form
 ```csharp
