@@ -11,6 +11,8 @@ Features
 * Analyzes IP, email, user agent, submit time, and JS activity
 * Integrates easily via middleware or service injection
 
+If you find this project useful, please consider starring ⭐ it on GitHub — it helps us grow and support development!
+
 ## Actual API documentation
 * [check_message](https://cleantalk.org/help/api-check-message) - Check IPs, Emails and messages for spam activity
 * [check_newuser](https://cleantalk.org/help/api-check-newuser) - Check registrations of new users
